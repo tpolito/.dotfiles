@@ -2,21 +2,21 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    // Color scheme (Tokyo Night inspired)
-    readonly property color bg: "#1a1b26"
-    readonly property color fg: "#a9b1d6"
-    readonly property color muted: "#444b6a"
-    readonly property color cyan: "#0db9d7"
-    readonly property color purple: "#ad8ee6"
-    readonly property color red: "#f7768e"
-    readonly property color yellow: "#e0af68"
-    readonly property color blue: "#7aa2f7"
+    // Color scheme
+    readonly property color bg: "#1c1e1a"
+    readonly property color fg: "#ffffff"
+    readonly property color muted: "#3d4038"
+    readonly property color primary: "#8fb573"
+    readonly property color secondary: "#9caa8c"
+    readonly property color alert: "#f7768e"
+    readonly property color warning: "#d4b876"
+    readonly property color info: "#7ba3a3"
 
     // Typography
     readonly property string fontFamily: "JetBrainsMono Nerd Font"
     readonly property int fontSize: 14
 
     // Bar dimensions
-    readonly property int barHeight: 30
+    readonly property int barHeight: 45
     readonly property int spacing: 8
 }

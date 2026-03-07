@@ -7,7 +7,7 @@ Text {
     property string kernelVersion: "Linux"
 
     text: kernelVersion
-    color: Theme.red
+    color: Theme.alert
     font.pixelSize: Theme.fontSize
     font.family: Theme.fontFamily
     font.bold: true

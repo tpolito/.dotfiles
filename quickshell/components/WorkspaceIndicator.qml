@@ -24,7 +24,7 @@ Item {
 
                 Text {
                     text: index + 1
-                    color: parent.isActive ? Theme.cyan : (parent.hasWindows ? Theme.cyan : Theme.muted)
+                    color: parent.isActive ? Theme.primary : (parent.hasWindows ? Theme.primary : Theme.muted)
                     font.pixelSize: Theme.fontSize
                     font.family: Theme.fontFamily
                     font.bold: true
@@ -34,7 +34,7 @@ Item {
                 Rectangle {
                     width: 20
                     height: 3
-                    color: parent.isActive ? Theme.purple : Theme.bg
+                    color: parent.isActive ? Theme.secondary : Theme.bg
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.bottom: parent.bottom
                 }

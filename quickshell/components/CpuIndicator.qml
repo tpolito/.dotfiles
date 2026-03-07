@@ -9,7 +9,7 @@ Text {
     property var lastCpuTotal: 0
 
     text: "CPU: " + cpuUsage + "%"
-    color: Theme.yellow
+    color: Theme.warning
     font.pixelSize: Theme.fontSize
     font.family: Theme.fontFamily
     font.bold: true

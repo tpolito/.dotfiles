@@ -6,9 +6,21 @@ import Quickshell.Hyprland
 Text {
     id: windowText
     property string activeWindow: "Window"
+    property string clampedWindow: "Window"
 
-    text: activeWindow
-    color: Theme.purple
+    function clampWindowTitle(title) {
+        const maxLength = 50
+        if (!title) {
+            return ""
+        }
+        if (title.length <= maxLength) {
+            return title
+        }
+        return title.slice(0,maxLength) + '...'
+    }
+
+    text: clampedWindow
+    color: Theme.secondary
     font.pixelSize: Theme.fontSize
     font.family: Theme.fontFamily
     font.bold: true
@@ -23,7 +35,9 @@ Text {
         stdout: SplitParser {
             onRead: data => {
                 if (data && data.trim()) {
-                    windowText.activeWindow = data.trim()
+                    var title = data.trim()
+                    windowText.activeWindow = title
+                    windowText.clampedWindow = windowText.clampWindowTitle(title)
                 }
             }
         }

@@ -47,18 +47,29 @@ Row {
               wifiRow.wifiSignal >= 60 ? "󰤥" :
               wifiRow.wifiSignal >= 40 ? "󰤢" :
               wifiRow.wifiSignal >= 20 ? "󰤟" : "󰤯"
-        color: Theme.cyan
+        color: Theme.primary
         font.pixelSize: Theme.fontSize
         font.family: Theme.fontFamily
         font.bold: true
     }
 
+    Process {
+        id: nmConnectionEditor
+        command: ["nm-connection-editor"]
+    }
+
     Text {
         id: ssidText
         text: wifiRow.wifiConnected ? wifiRow.wifiSSID : ""
-        color: Theme.cyan
+        color: Theme.primary
         font.pixelSize: Theme.fontSize
         font.family: Theme.fontFamily
         font.bold: true
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: nmConnectionEditor.running = true
+            cursorShape: Qt.PointingHandCursor
+        }
     }
 }

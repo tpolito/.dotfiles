@@ -1,13 +1,16 @@
 import Quickshell
+import QtQml
 import "components"
 
 ShellRoot {
     Variants {
         model: Quickshell.screens
-
-        Bar {
-            property var modelData
-            screen: modelData
+        
+        delegate: Component {
+            Bar {
+                required property var modelData
+                screen: modelData
+            }
         }
     }
 }

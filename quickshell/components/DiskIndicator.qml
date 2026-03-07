@@ -7,7 +7,7 @@ Text {
     property int diskUsage: 0
 
     text: "Disk: " + diskUsage + "%"
-    color: Theme.blue
+    color: Theme.info
     font.pixelSize: Theme.fontSize
     font.family: Theme.fontFamily
     font.bold: true

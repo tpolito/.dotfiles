@@ -7,7 +7,7 @@ Text {
     property int volumeLevel: 0
 
     text: "Vol: " + volumeLevel + "%"
-    color: Theme.purple
+    color: Theme.secondary
     font.pixelSize: Theme.fontSize
     font.family: Theme.fontFamily
     font.bold: true
