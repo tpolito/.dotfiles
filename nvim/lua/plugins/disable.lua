@@ -5,5 +5,5 @@ return {
   -- disable which key
   { "folke/which-key.nvim", enabled = false },
   -- disable copilot completions inside dropdown menu
-  { "zbirenbaum/copilot-cmp", enabled = false },
+  -- { "zbirenbaum/copilot-cmp", enabled = false },
 }
