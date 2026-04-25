@@ -1,8 +1,8 @@
 # Apperance
 theme = Dracula
-background = 000000
+# background = 000000
 
-font-size = 16
+font-size = 14
 window-inherit-font-size = false
 
 cursor-style = block
@@ -10,10 +10,26 @@ shell-integration-features = no-cursor
 
 working-directory = home 
 window-inherit-working-directory = false
+tab-inherit-working-directory = false
+split-inherit-working-directory = true
 
-# Keybinds
-keybind = super+shift+h=previous_tab
-keybind = super+shift+l=next_tab
-keybind = super+d=new_split:right
-keybind = ctrl+l=goto_split:right
-keybind = ctrl+h=goto_split:left
+# Keybinds - https://ghostty.org/docs/config/keybind/reference
+keybind = ctrl+shift+h=previous_tab
+keybind = ctrl+t=new_tab
+keybind = ctrl+f=start_search
+keybind = ctrl+shift+l=next_tab
+keybind = ctrl+a>w=close_tab
+keybind = ctrl+w=close_surface
+keybind = shift+enter=text:\x1b\r
+
+keybind = ctrl+v=paste_from_clipboard
+
+# Split stuff
+keybind = ctrl+d=new_split:right
+keybind = ctrl+a>/=new_split:right
+keybind = ctrl+a>\=new_split:down
+keybind = alt+l=goto_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+
