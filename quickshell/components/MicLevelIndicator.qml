@@ -13,6 +13,17 @@ Text {
     font.bold: true
     Layout.rightMargin: 8
 
+    MouseArea {
+        anchors.fill: parent
+        cursorShape: Qt.PointingHandCursor
+        onClicked: pavuProc.running = true
+    }
+
+    Process {
+        id: pavuProc
+        command: ["pavucontrol", "-t", "4"]
+    }
+
     Process {
         id: micProc
         command: [

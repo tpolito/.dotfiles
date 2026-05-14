@@ -76,7 +76,15 @@ PanelWindow {
             Separator {
                 Layout.leftMargin: 0
             }
+            MicGainButton {}
+            Separator {
+                Layout.leftMargin: 0
+            }
             VolumeIndicator {}
+            Separator {
+                Layout.leftMargin: 0
+            }
+            HeadphoneConnectButton {}
             Separator {
                 Layout.leftMargin: 0
             }
