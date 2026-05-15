@@ -212,9 +212,10 @@ hl.bind(main_mod .. " + W", hl.dsp.window.close())
 hl.bind(main_mod .. " + E", hl.dsp.exec_cmd(file_manager))
 hl.bind(main_mod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(main_mod .. " + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind(main_mod .. " + SHIFT + L", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ 1 && hyprlock"))
 hl.bind(main_mod .. " + P", hl.dsp.window.pseudo())
 
--- hl.bind(main_mod .. " + D", hl.exec_cmd("~/.config/hypr/focus_discord.sh"))
+hl.bind(main_mod .. " + D", hl.dsp.exec_cmd("~/.config/hypr/focus_discord.sh"))
 
 hl.bind(main_mod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(main_mod .. " + l", hl.dsp.focus({ direction = "right" }))

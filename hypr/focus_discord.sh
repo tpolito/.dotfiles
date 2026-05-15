@@ -10,8 +10,8 @@ ws=$(printf '%s\n' "$client_json" | jq -r '.workspace.id')
 addr=$(printf '%s\n' "$client_json" | jq -r '.address')
 
 if [ -n "$addr" ] && [ "$addr" != "null" ]; then
-    hyprctl dispatch workspace "$ws"
-    hyprctl dispatch focuswindow "address:$addr"
+    hyprctl dispatch "hl.dsp.focus({ workspace = $ws })"
+    hyprctl dispatch "hl.dsp.focus({ address = \"$addr\" })"
 else
     discord
 fi
