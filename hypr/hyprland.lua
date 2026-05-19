@@ -215,14 +215,16 @@ hl.bind(main_mod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(main_mod .. " + SHIFT + L", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ 1 && hyprlock"))
 hl.bind(main_mod .. " + P", hl.dsp.window.pseudo())
 
-hl.bind(main_mod .. " + D", hl.dsp.exec_cmd("~/.config/hypr/focus_discord.sh"))
-
+--- Scripts
+hl.bind(main_mod .. " + D", hl.dsp.exec_cmd("~/.config/hypr/scripts/focus_discord.sh"))
+hl.bind("CTRL + SHIFT + S", hl.dsp.exec_cmd("~/.config/hypr/scripts/screenshot_tool.sh"))
+-- Move focus with main_mod + vimkeys
 hl.bind(main_mod .. " + h", hl.dsp.focus({ direction = "left" }))
 hl.bind(main_mod .. " + l", hl.dsp.focus({ direction = "right" }))
 hl.bind(main_mod .. " + k", hl.dsp.focus({ direction = "up" }))
 hl.bind(main_mod .. " + j", hl.dsp.focus({ direction = "down" }))
 
--- Move focus with main_mod + arrow keys
+-- Move windows with main_mod + arrow keys
 hl.bind(main_mod .. " + left", hl.dsp.window.move({ direction = "left" }))
 hl.bind(main_mod .. " + right", hl.dsp.window.move({ direction = "right" }))
 hl.bind(main_mod .. " + up", hl.dsp.window.move({ direction = "up" }))
