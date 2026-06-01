@@ -76,10 +76,6 @@ PanelWindow {
             Separator {
                 Layout.leftMargin: 0
             }
-            MicGainButton {}
-            Separator {
-                Layout.leftMargin: 0
-            }
             VolumeIndicator {}
             Separator {
                 Layout.leftMargin: 0
@@ -92,7 +88,7 @@ PanelWindow {
             Separator {
                 Layout.leftMargin: 0
             }
-            WifiIndicator {}
+            InternetIndicator {}
             Item { width: Theme.spacing }
         }
     }

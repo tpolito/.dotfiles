@@ -36,7 +36,7 @@ Text {
 
     Process {
         id: pavuProc
-        command: ["pavucontrol"]
+        command: ["pavucontrol", "-t", "3"]
     }
 
     Timer {
