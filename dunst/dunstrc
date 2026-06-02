@@ -1,0 +1,28 @@
+# See dunst(5) for all configuration options
+ 
+[global]
+    monitor = 0
+    follow = mouse
+    width = (100, 300)
+    height = (0, 300)
+    origin = top-left
+    offset = (5,15)
+    font = Fira Mono 12
+    icon_position = left
+
+    [urgency_low]
+        background = "#000000"
+        foreground = "#888888"
+        frame_color = "#888888"
+
+    [urgency_normal]
+        background = "#111111"
+        foreground = "#ffffff"
+        frame_color = "#5e81ac"
+
+    [urgency_critical]
+        background = "#300000"
+        foreground = "#ff5555"
+        frame_color = "#ff5555"
+
+
