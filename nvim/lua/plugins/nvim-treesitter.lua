@@ -9,6 +9,7 @@ return {
       "c",
       "diff",
       "gdscript",
+      "godot_resource",
       "html",
       "javascript",
       "jsdoc",
@@ -30,6 +31,9 @@ return {
       "vimdoc",
       "xml",
       "yaml",
+      "scss",
+      "md",
+      "mdx",
     },
   },
 }
