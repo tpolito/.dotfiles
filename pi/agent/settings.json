@@ -1,0 +1,17 @@
+{
+  "lastChangelogVersion": "0.80.6",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "glm-5.2",
+  "defaultThinkingLevel": "high",
+  "enabledModels": [
+    "opencode-go/deepseek-v4-flash",
+    "opencode-go/deepseek-v4-pro",
+    "opencode-go/glm-5.2"
+  ],
+  "theme": "dracula",
+  "editorPaddingX": 1,
+  "packages": [
+    "npm:@plannotator/pi-extension",
+    "git:github.com/dmmulroy/pi-mcp"
+  ]
+}
