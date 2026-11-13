@@ -248,6 +248,10 @@ hl.bind(main_mod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:ma
 hl.bind(main_mod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(main_mod .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
 
+-- Move to the adjacent workspace, including empty ones
+hl.bind(main_mod .. " + bracketright", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(main_mod .. " + bracketleft", hl.dsp.focus({ workspace = "-1" }))
+
 -- Move/resize windows with main_mod + LMB/RMB and dragging
 hl.bind(main_mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(main_mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })

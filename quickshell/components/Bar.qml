@@ -38,7 +38,7 @@ PanelWindow {
             }
             spacing: 0
             Item { width: Theme.spacing }
-            WorkspaceIndicator {}
+            ClockWidget {}
             Separator {}
             LayoutIndicator {}
             Separator {
@@ -46,9 +46,9 @@ PanelWindow {
             }
             ActiveWindow {}
         }
-        
+
         // Center section - absolutely centered
-        ClockWidget {
+        WorkspaceIndicator {
             anchors.centerIn: parent
         }
         

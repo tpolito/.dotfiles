@@ -11,20 +11,22 @@ Item {
         spacing: 0
 
         Repeater {
-            model: 9
+            model: Hyprland.workspaces.values
+                .filter(ws => ws.id > 0)
+                .sort((a, b) => a.id - b.id)
 
             Rectangle {
+                required property var modelData
+
                 Layout.preferredWidth: 20
                 Layout.preferredHeight: 30
                 color: "transparent"
 
-                property var workspace: Hyprland.workspaces.values.find(ws => ws.id === index + 1) ?? null
-                property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
-                property bool hasWindows: workspace !== null
+                property bool isActive: Hyprland.focusedWorkspace?.id === modelData.id
 
                 Text {
-                    text: index + 1
-                    color: parent.isActive ? Theme.primary : (parent.hasWindows ? Theme.primary : Theme.muted)
+                    text: modelData.id
+                    color: Theme.primary
                     font.pixelSize: Theme.fontSize
                     font.family: Theme.fontFamily
                     font.bold: true
@@ -41,7 +43,7 @@ Item {
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: Hyprland.dispatch("hl.dsp.focus({ workspace = " + (index + 1) + " })")
+                    onClicked: Hyprland.dispatch("hl.dsp.focus({ workspace = " + modelData.id + " })")
                 }
             }
         }
