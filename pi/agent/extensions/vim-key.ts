@@ -2,7 +2,7 @@
  * vim-key extension
  *
  * Rolls up two vim-style conveniences into one extension:
- *   1. :q / :q! at the prompt to quit pi (source-merged from vim-quit.ts).
+ *   1. :q / :q! at the prompt to quit pi.
  *   2. ctrl+j / ctrl+k to navigate any dropdown (autocomplete, select lists, etc.).
  *
  * Drop into ~/.pi/agent/extensions/vim-key.ts (auto-discovered) or load with:

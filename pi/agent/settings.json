@@ -1,17 +1,17 @@
 {
-  "lastChangelogVersion": "0.83.0",
-  "defaultProvider": "opencode-go",
-  "defaultModel": "glm-5.2",
-  "defaultThinkingLevel": "high",
+  "lastChangelogVersion": "1.5.2",
+  "defaultProvider": "pi-claude-cli",
+  "defaultModel": "claude-opus-5-5",
+  "defaultThinkingLevel": "medium",
   "enabledModels": [
-    "opencode-go/deepseek-v4-flash",
-    "opencode-go/deepseek-v4-pro",
-    "opencode-go/glm-5.2"
+    "opencode-go/deepseek-v4.1-flash",
+    "pi-claude-cli/claude-opus-5-5"
   ],
-  "theme": "dracula",
+  "theme": "system",
   "editorPaddingX": 1,
   "packages": [
     "npm:@plannotator/pi-extension",
-    "git:github.com/dmmulroy/pi-mcp"
-  ]
+    "git:github.com/dmmulroy/pi-claude-cli"
+  ],
+  "hideThinkingBlock": false
 }
