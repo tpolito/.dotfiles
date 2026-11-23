@@ -4,7 +4,6 @@
   "defaultModel": "claude-opus-5-5",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
-    "opencode-go/deepseek-v4.1-flash",
     "pi-claude-cli/claude-opus-5-5"
   ],
   "theme": "system",
